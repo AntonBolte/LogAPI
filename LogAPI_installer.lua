@@ -1,5 +1,5 @@
 local rawFileURL = "https://raw.githubusercontent.com/AntonBolte/LogAPI/refs/heads/master/LogAPI.lua"
-
+local arg = { ... }
 print("Downloading LogAPI...")
 local response = http.get(rawFileURL)
 print("Saving to " .. arg[1] .. " ...")
