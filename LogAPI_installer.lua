@@ -3,7 +3,7 @@ local rawFileURL = "https://raw.githubusercontent.com/AntonBolte/LogAPI/refs/hea
 print("Downloading LogAPI...")
 local response = http.get(rawFileURL)
 if response then
-    local file = fs.open("LogAPI.lua", "w")
+    local file = fs.open(arg[1], "w")
     file.write(response.readAll())
     file.close()
     response.close()
