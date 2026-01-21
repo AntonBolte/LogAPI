@@ -10,7 +10,7 @@ end
 function Install(URL, path)
     local content = http.get(URL)
     local file = fs.open(path, "w+")
-    file.write(content.ReadAll())
+    file.write(content.readAll())
     file.close()
 end
 

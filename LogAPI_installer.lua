@@ -5,7 +5,7 @@ local response = http.get(rawFileURL)
 print("Saving to " .. arg[1] .. " ...")
 if response then
     local file = fs.open(arg[1], "w")
-    file.write(response.ReadAll())
+    file.write(response.readAll())
     file.close()
     response.close()
     print("LogAPI downloaded successfully.")
